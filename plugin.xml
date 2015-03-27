@@ -1,0 +1,25 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="br.com.vinta.cordova.toast"
+    version="0.0.1">
+    <name>Toast</name>
+    <description>Cordova native toast pluggin for Android</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,toast</keywords>
+
+    <js-module src="www/toast.js" name="toast">
+        <clobbers target="toast" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="MyToasta" >
+                <param name="android-package" value="br.com.vinta.cordova.toast.MyToast"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/MyToast.java" target-dir="src/br/com/vinta/cordova/toast"/>
+    </platform>
+</plugin>
