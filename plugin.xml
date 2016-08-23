@@ -15,7 +15,7 @@
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="MyToasta" >
+            <feature name="MyToast" >
                 <param name="android-package" value="br.com.vinta.cordova.toast.MyToast"/>
             </feature>
         </config-file>
